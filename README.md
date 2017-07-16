@@ -17,3 +17,5 @@ After some twiddling, I arrived at the following params and have set them as the
   Kp = 0.7
   Ki = 0.002
 ```
+
+A video of this could be found here: https://youtu.be/QDYG9qImt9M
