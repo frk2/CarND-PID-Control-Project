@@ -6,11 +6,22 @@ public:
   /*
   * Errors
   */
-  double p_error;
-  double i_error;
-  double d_error;
+  double dp;
+  double di;
+  double dd;
 
+  double last_error;
+  double total_error;
+  double best_err;
+
+  double last_err_window;
+  int window_samples;
+  int samples;
+  int twiddling_index;
+  int twiddle_check_mode;
   /*
+   *
+   *
   * Coefficients
   */ 
   double Kp;
@@ -35,7 +46,8 @@ public:
   /*
   * Update the PID error variables given cross track error.
   */
-  void UpdateError(double cte);
+  double
+  UpdateError(double cte);
 
   /*
   * Calculate the total PID error.
